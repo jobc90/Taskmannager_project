@@ -1,0 +1,231 @@
+.main-container {
+    margin: 10px auto;
+    width: 500px;
+    height: 100%;
+}
+
+.menu-nav {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 30px;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    width: 470px;
+    height: 50px;
+}
+
+.info-photo {
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.info-photo:hover {
+    opacity: 0.6;
+}
+
+.info-photo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+.add-task-button {
+    position: absolute;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgb(255, 80, 60);
+}
+
+.add-task-button .fa-plus {
+    /* width: 20px;
+    height: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+
+.add-task-button:hover {
+    opacity: 0.6;
+    background-color: rgb(255, 80, 60);
+    /* transform: scale(1.1); */
+}
+
+/* .menu-nav:hover:not(.add-task-button) {
+    filter: brightness(0.8) blur(2px);
+} */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 50px;
+    padding-left: 25px;
+}
+
+.main-title {
+    margin: 20px 0px 0px 20px;
+    font-size: 40px;
+}
+
+.main-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    width: 90%;
+
+    margin-top: 30px;
+    margin-left: 22px;
+    border: 2px solid #dbdbdb;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.progress-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+  }
+
+
+.progress-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    right: 0;
+}
+
+.progress-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-size: 20px;
+
+}
+
+.progress-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main-reminder {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.task-content{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow-y: auto;
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 470px;
+    padding-left: 0px;
+    padding-top: 25px;
+}
+
+.content-deadline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    transform: rotate(270deg);
+
+    padding-right: 5px;
+
+    font-size: 17px;
+}
+
+.content-list {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #dbdbdb;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    box-shadow: 0px 0px 5px 1px #dbdbdb;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.content-header {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+}
+
+.content-body {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    height: 15%;
+    font-size: 15px;
+}
+
+.content-footer {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    height: 45%;
+    font-size: 20px;
+}
+
+
+
+
