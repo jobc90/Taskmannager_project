@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/index.css">
+    
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Task Manager</title>
 </head>
 <body>
     <div class="container">
         <main class="main-container">
             <nav class="menu-nav">
-                <div class="info-photo">
+                <div class="profile-photo">
                     <img src="./images/noimage.jpg">
                 </div>
                 <button class="add-task-button"><i class="fa-solid fa-plus"></i></button>
@@ -23,63 +25,151 @@
             </header>
             <div class="main-progress">
                 <div class="progress-left">
-                    78%
+                    <div class="progress-chart">
+                        <div class="progress-chart-bar">
+                            <div class="progress-chart-percentage">70%</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="progress-right">
                     <div class="progress-header">
                         Weekly progress
                     </div>
-                    <div class="progress-body">
-                        14/22 tasks done
+                    <div class="progress-body">14/22 
+                        <div class="progress-footer">
+                            tasks done
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="main-reminder">
-                You have 5 tasks for today
+                You have <span id="today-tasks">&nbsp;5&nbsp; </span> tasks for today
             </div>
             <div class="task-content">
                 <ul class="content-container">
                     <div class="content-deadline">08:00</div>
-                    <li class="content-list">
-                        <div class="content-header">할 일</div>
-                        <div class="content-body">세부 목표</div>
-                        <div class="content-footer">함께 할 사람</div>
+                    <li class="content-list1 background1">
+                        <div class="content-header">UX Design sprint</div>
+                        <div class="content-body">Team meeting & brainstorming</div>
+                        <div class="content-footer">Coworkers</div>
                     </li>
                 </ul>
                 <ul class="content-container">
-                    <div class="content-deadline">08:00</div>
-                    <li class="content-list">
-                        <div class="content-header">할 일</div>
-                        <div class="content-body">세부 목표</div>
-                        <div class="content-footer">함께 할 사람</div>
+                    <div class="content-deadline">10:00</div>
+                    <li class="content-list2 background2">
+                        <div class="content-header">Ebook design</div>
+                        <div class="content-body">planning & design for a new book</div>
+                        <div class="content-footer">Coworkers</div>
                     </li>
                 </ul>
                 <ul class="content-container">
-                    <div class="content-deadline">08:00</div>
-                    <li class="content-list">
-                        <div class="content-header">할 일</div>
-                        <div class="content-body">세부 목표</div>
-                        <div class="content-footer">함께 할 사람</div>
+                    <div class="content-deadline">14:00</div>
+                    <li class="content-list3 background3">
+                        <div class="content-header">Client meeting</div>
+                        <div class="content-body">Feedback & project overview</div>
+                        <div class="content-footer">Coworkers</div>
                     </li>
                 </ul>
                 <ul class="content-container">
-                    <div class="content-deadline">08:00</div>
-                    <li class="content-list">
-                        <div class="content-header">할 일</div>
-                        <div class="content-body">세부 목표</div>
-                        <div class="content-footer">함께 할 사람</div>
+                    <div class="content-deadline">15:00</div>
+                    <li class="content-list4 background4">
+                        <div class="content-header">Landing page</div>
+                        <div class="content-body">Content & UI/UX design</div>
+                        <div class="content-footer">Coworkers</div>
                     </li>
                 </ul>
                 <ul class="content-container">
-                    <div class="content-deadline">08:00</div>
-                    <li class="content-list">
+                    <div class="content-deadline">18:00</div>
+                    <li class="content-list1 background1">
                         <div class="content-header">할 일</div>
                         <div class="content-body">세부 목표</div>
-                        <div class="content-footer">함께 할 사람</div>
+                        <div class="content-footer">Coworkers</div>
                     </li>
                 </ul>
             </div>
         </main>
+        <main class="main-container main-hidden">
+            <header class="main-header">
+                <h1 class="main-title">User Information</h1>
+            </header>
+            <div class="info-photo">
+                <form class="photo-form">
+                    <input type="file" class="photo-file" name="file">
+                </form>
+                <img src="./images/noimage.jpg">
+                <div class="change-nav">클릭하여 이미지 변경</div>
+            </div>
+            <div class="info-main">
+                <h1 class="info-title">
+                    About Me
+                    <button class="modify-button m-aboutme">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="save-button s-aboutme button-hidden">
+                        <i class="fa-regular fa-square-check"></i>
+                    </button>
+                </h1>
+                <div class="info-detail">
+                    <div class="detail-left">
+                        <div class="info-input-container">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="info-input" disabled>
+                        </div>
+                        <div class="info-input-container">
+                            <label for="email">e-Mail</label>
+                            <input type="text" id="email" class="info-input" disabled>
+                        </div>
+                    </div>
+                    <div class="detail-right">
+                        <div class="info-input-container">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" class="info-input" disabled>
+                        </div>
+                        <div class="info-input-container">
+                            <label for="gitHub">GitHub</label>
+                            <input type="text" id="gitHub" class="info-input" disabled>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="info-work">
+                        <h1 class="info-title">
+                            Coworkers
+                            <button class="modify-button m-coworker">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <button class="save-button s-coworker button-hidden">
+                                <i class="fa-regular fa-square-check"></i>
+                            </button>
+                        </h1>
+                        <textarea class="coworker-input"></textarea>
+                        <h1 class="info-title">
+                            Projects
+                            <button class="modify-button m-projects">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <button class="save-button s-projects button-hidden">
+                                <i class="fa-regular fa-square-check"></i>
+                            </button>
+                        </h1>
+                        <textarea class="projects-input"></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="modal-container modal-hidden">
+        <div class="modal-section backround-modal">
+            <div class="modal-header">
+                <h1 class="modal-title">Greate job, <span id="user-name">User</span> !!</h1>
+            </div>
+            <div class="modal-main">
+                you tasks for today are finished
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-back-button">⫷</button>
+                <button type="button" class="modal-create-button">Create another task</button>
+            </div>
+        </div>
     </div>
     <script src="./js/app.js"></script>
 </body>
