@@ -8,11 +8,6 @@
     display: none;
 }
 
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
 
 .menu-nav {
     position: relative;
@@ -25,6 +20,14 @@
     padding-bottom: 5px;
     width: 470px;
     height: 50px;
+}
+
+.main-manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 50px;
+    padding-left: 25px;
 }
 
 .profile-photo {
@@ -80,13 +83,7 @@
     filter: brightness(0.8) blur(2px);
 } */
 
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 50px;
-    padding-left: 25px;
-}
+
 
 .main-title {
     margin: 20px 0px 0px 20px;
@@ -247,14 +244,14 @@ ul {
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 470px;
+    width: 545px;
     padding-left: 0px;
     padding-top: 25px;
     position: relative;
     left: 0px;
 }
 
-.content-container:hover {
+.content-container:hover, .content-container .active {
     transform: translateX(-100px);
     transition: transform 1s ease;
     outline: none;
@@ -265,11 +262,11 @@ ul {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    width: 10%;
+    width: 5%;
     transform: rotate(270deg);
 
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     color: #0d66da;
 }
 
@@ -412,7 +409,116 @@ ul {
     font-size: 17px;
 }
 
+.content-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-check-button {
+    position: relative;
+    top: -8px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    font-size: 30px;
+
+}
+
+.content-delete-button {
+    position: relative;
+    bottom: -8px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    font-size: 30px;
+}
+
+.profile-back-button {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 80, 60);
+    font-size: 30px; 
+    background-color: #00000000;
+
+    border: 3px solid rgb(255, 80, 60);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    cursor: pointer;
+}
+
+.profile-back-button:hover {
+    opacity: 0.6;
+    background-color: #00000000;
+}
+
+.profile-save-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 311px;
+    width: 150px;
+    height: 50px;
+
+    color: #0d66da;
+    font-size: 17px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+.profile-save-button:hover {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transform: translateX(-20px);
+    transition: transform 1s ease;
+    outline: none;
+}
+
+.main-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 60px;
+}
+
 .info-photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     margin-left: 130px;
     width: 200px;
@@ -458,8 +564,8 @@ ul {
 }
 
 .info-main {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 10px 20px 20px 20px;
 }
 
 .info-title {
